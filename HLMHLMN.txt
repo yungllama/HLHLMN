@@ -1,0 +1,32 @@
+import random
+
+print("Ready to find out if he really loves you?\n")
+def does_he_love_me(tot_petal):
+    phrases = ["He loves me :)", "He loves me not :("]
+    result = []
+
+    for i in range(tot_petal):
+        result.append(phrases[i % 2])  # Alternate between "He loves me?" and "He loves me not?"
+    
+    # Final outcome
+    final_phrase = result[-1]
+    
+    
+    
+    # Print the alternating phrases for each petal
+    for i, phrase in enumerate(result, 1):
+        print(f"\nFlower Petal #{i} says: {phrase}")
+    
+    print("\nIt has been confirmed that...", final_phrase)
+
+# Get the number of tot_petal from the user
+tot_petal = int(input("How many petals did he give you? "))
+
+# Checks if there is at least one petal
+if tot_petal > 0:
+    does_he_love_me(tot_petal)
+else:
+    print("\nHmmmmmmmmmmmmmmmmmm, no petals from the start?\n \nHe doesn't love you :(")
+    
+    #written by yung llama
+    
